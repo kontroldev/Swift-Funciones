@@ -5,5 +5,7 @@
         <page name='Parametros de entrada'/>
         <page name='Parametros de salida'/>
         <page name='Etiquetas de argumento'/>
+        <page name='Parametros tipo  inout'/>
+        <page name='Function Types'/>
     </pages>
 </playground>

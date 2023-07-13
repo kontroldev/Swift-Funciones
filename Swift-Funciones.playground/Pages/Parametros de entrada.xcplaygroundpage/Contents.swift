@@ -9,7 +9,7 @@ sayHelloWorld()
 sayHelloWorld()
 
 
-//FUNCIONES CON MULTIPLES ENTRADAS
+// FUNCIONES CON MULTIPLES ENTRADAS
 func greeting(person: String, isMale:Bool) -> String {  //Esta funcion me devolvera una cadena de texto "String" y podemos añadir mas parametros sepàrados por comas.
     if isMale {   // ⬅️ Si es un hombre devolvemos...   // ⬆️ Esta funcion tiene dos parametros de entrada.( person y isMale)
         return "Bienvenido caballero \(person)"
@@ -21,7 +21,7 @@ greeting(person: "Ricardo Celis", isMale: true)
 greeting(person: "Olivia", isMale: false)
 
 
-//EJERCICIOS
+// EJERCICIOS CON 3 ENTRADAS
 func anotherGreeting(person: String, isMale: Bool, age: Int) -> String{
     if isMale && age > 20{
         return "Bienvenido Caballero \(person)"
