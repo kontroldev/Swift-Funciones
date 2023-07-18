@@ -7,5 +7,6 @@
         <page name='Etiquetas de argumento'/>
         <page name='Parametros tipo  inout'/>
         <page name='Function Types'/>
+        <page name='Closures'/>
     </pages>
 </playground>

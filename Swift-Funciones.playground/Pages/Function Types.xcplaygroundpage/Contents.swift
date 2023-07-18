@@ -49,4 +49,22 @@ while value != 0 {
     print("\(value)...")
     value = moveNearZero(value)
 }
-print("sCero!!!!!")
+print("Cero!!!!!")
+
+
+// FUNCIONES ANIDADAS.
+
+/*Una función anidada se refiere a una función que está definida dentro de otra función en un lenguaje de programación. En otras palabras, una función anidada está contenida dentro de otra función, lo que significa que la función interna solo es accesible y visible dentro del alcance de la función externa.*/
+ 
+// Ejemplo poniendo como dato el codigo mas arriba declarado. 👇
+
+func chooStepFuction2(backward: Bool ) -> (Int) -> Int {
+    func stepForward2(_ input: Int) -> Int {
+        return input + 1
+    }
+    
+    func stepBackward2(_ input: Int) -> Int {
+        return input - 1
+    }
+    return backward ? stepBackward : stepForward
+}
