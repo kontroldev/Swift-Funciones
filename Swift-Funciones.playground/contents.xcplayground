@@ -8,5 +8,6 @@
         <page name='Parametros tipo  inout'/>
         <page name='Function Types'/>
         <page name='Closures'/>
+        <page name='Enumerations'/>
     </pages>
 </playground>

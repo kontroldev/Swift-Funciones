@@ -156,3 +156,45 @@ let incrementBySeven = makeIncrementer(forIncrement: 7)
 incrementBySeven()
 
 incrementByten()
+
+
+//ESCAPING CLOSURES - ESCAPANDO DE LOS CIERRES.
+/*Escaping closures, son closures que pueden ser ejecutados o llamados más tarde, después de que la función que los contiene haya terminado de ejecutarse. Dicho de otro modo, el closure «se escapa» del ámbito de la función.*/
+
+var completionHandlers: [() -> Void] = []
+
+func someFunctionsWithEscapingClosure(completionHandLer: @escaping () -> Void){    // la `@`se le llama atributos o modificadores.
+    completionHandlers.append(completionHandLer)  // al poner `@escaping`, no ejecuta la funcion y la guarda para mas tarde.
+}
+completionHandlers.count
+
+
+func someFunctionWithNonEscapingClosure(closure: () -> Void) {
+    closure()
+}
+
+
+class SomeClass{
+    var x = 10
+    func doSomething(){
+        someFunctionsWithEscapingClosure {
+            self.x = 100    // La palabra reservada `self`, le dice esplicitamente al @escaping closure donde encontar la variante que va hacer uso.
+        }
+        someFunctionWithNonEscapingClosure {
+            x = 200
+        }
+    }
+}
+
+
+let instance = SomeClass()  // Esto podria ser como un `String`, pero en este caso seria un objero de la someClass.
+print(instance.x)
+
+instance.doSomething()
+print(instance.x)
+
+completionHandlers.count
+completionHandlers.first?()
+print(instance.x)
+
+
